@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/Mono-transaction/static/css/main.54bc1695.chunk.css",
-    "main.js": "/Mono-transaction/static/js/main.776b6b58.chunk.js",
-    "main.js.map": "/Mono-transaction/static/js/main.776b6b58.chunk.js.map",
+    "main.css": "/Mono-transaction/static/css/main.076898be.chunk.css",
+    "main.js": "/Mono-transaction/static/js/main.e36f37ba.chunk.js",
+    "main.js.map": "/Mono-transaction/static/js/main.e36f37ba.chunk.js.map",
     "runtime-main.js": "/Mono-transaction/static/js/runtime-main.f5934c6a.js",
     "runtime-main.js.map": "/Mono-transaction/static/js/runtime-main.f5934c6a.js.map",
     "static/js/2.a1f51e3c.chunk.js": "/Mono-transaction/static/js/2.a1f51e3c.chunk.js",
     "static/js/2.a1f51e3c.chunk.js.map": "/Mono-transaction/static/js/2.a1f51e3c.chunk.js.map",
     "index.html": "/Mono-transaction/index.html",
-    "static/css/main.54bc1695.chunk.css.map": "/Mono-transaction/static/css/main.54bc1695.chunk.css.map",
+    "static/css/main.076898be.chunk.css.map": "/Mono-transaction/static/css/main.076898be.chunk.css.map",
     "static/js/2.a1f51e3c.chunk.js.LICENSE.txt": "/Mono-transaction/static/js/2.a1f51e3c.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.f5934c6a.js",
     "static/js/2.a1f51e3c.chunk.js",
-    "static/css/main.54bc1695.chunk.css",
-    "static/js/main.776b6b58.chunk.js"
+    "static/css/main.076898be.chunk.css",
+    "static/js/main.e36f37ba.chunk.js"
   ]
 }
