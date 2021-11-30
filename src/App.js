@@ -38,7 +38,6 @@ const App = () => {
             hasSomeNulls === false
           ) {
             setTransactions(response)
-            setIsLoading(false)
           } else {
             setError({ msg: "Json Malformated!" })
             setTransactions([])
@@ -86,6 +85,7 @@ const App = () => {
             content={js}
             type="submit"
             setSelectTransactionType={setSelectTransactionType}
+            isLoading={isLoading}
           />
         ))}
       </div>

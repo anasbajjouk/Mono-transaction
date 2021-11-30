@@ -10,7 +10,7 @@ export const transactionsRequest = (typeOfTransaction = "small") => {
   }
 
   return new Promise((resolve, reject) => {
-    const mock = mocks[typeOfTransaction]
+    const mock = mocks[typeOfTransaction.toLowerCase()]
     if (!mock) {
       reject("transactions not found")
     }

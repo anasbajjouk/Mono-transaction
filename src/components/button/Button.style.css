@@ -17,6 +17,13 @@
   box-shadow: 3px 5px 19px -6px var(--shadow);
 }
 
+.button:disabled,
+button[disabled] {
+  border: 1px solid #b4b4b4;
+  background-color: #b1b1b1;
+  color: white;
+}
+
 .button-container {
   display: flex;
   flex-direction: row;
