@@ -1,0 +1,45 @@
+.error-container {
+  background: #aa7722
+    url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/626404/500.gif") no-repeat;
+  background-size: cover;
+  background-position: center bottom;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+div {
+  color: #fff;
+  margin: 0 auto;
+}
+
+h1 {
+  font-weight: 700;
+  margin-bottom: 0;
+  font-size: 20rem;
+}
+
+p {
+  margin-top: 0;
+  font-size: 4rem;
+  padding: 5rem 0;
+}
+
+@media (max-width: 84em) {
+  div {
+    padding: 0;
+  }
+
+  h1 {
+    font-size: 6rem;
+    padding-bottom: 12rem;
+  }
+
+  p {
+    font-size: 3rem;
+    padding: 2rem 1rem;
+  }
+}

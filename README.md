@@ -1,70 +1,37 @@
-# Getting Started with Create React App
+# Exercise - React
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## The task
+The results show excatly the desired outcome.
 
-## Available Scripts
+## Assumptions
+- A user can have multiple transactions.
+- A user can have transactions in multiple currencies.
+- A user will have at least one transaction.
+- There are no duplicated transactions. Two transactions with the same timestamp for the same user are 2 distinct transactions.
+- We assume the currencies are limited to: GBP, EUR, USD.
+- The dates will be valid so as the currencies and the amounts (unless if they are null - which handled)
+- Json input is not in 1mil record.
 
-In the project directory, you can run:
+## Approach
+Logic was the first think to think of before the UI part.
+The idea was to groupBy by user then by currency in order to have the data we need for each user.
+Then calculating both higher timestamp within those objects and the sum of the amount after converting them to numbers instead of integers.
+Once the logic part was finished, then unit tests took place then afterwards the UI.
+Once all done, some performance tests were performed using Profiler and Lighthouse to add some optimization to the code with some refactoring, before building the solution and shipping it to production.
 
-### `yarn start`
+## Notes
+- Loadash was used some times inleveraging general purpose tools like groupBy etc... for optimization issues and was not used for the sum, you will find the sum commented out.
+- No UI library was used, only CSS.
+- Loading Indicator is present so as HTTP mock - there is a mock and mimicking the API called with a delay of 1s - You can change it if you like, you will find it in the App.js (2nd useEffect).
+- The mini project was meant to have a UI look and tried to make responsive as much as possible, some media queries are present but not much... just to show how to use them.
+- Edge cases have been handled (Missing or malformated data or JSON properties or incase of some properties with a null value).
+- Some basic test are available there, however, not that much. (Had to go through the jest docs to make them).
+- The table is scollable - you can add the scrolling bar if you prefer that through CSS property in the CustomTable component.
+- Lighthouse results in incognito mode: 
+- # Performance: 98
+- # Accessibilty: 94
+- # Best Practices: 100
+- # SEO: 100
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `yarn test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `yarn build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## PS: Apologies if something was forgotten to be mentioned here.
+## This solution is shipped via github pages.

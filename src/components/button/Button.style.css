@@ -1,0 +1,40 @@
+.button {
+  padding: 2rem 4rem;
+  background: none;
+  border: 1px solid var(--color-th);
+  border-radius: 1rem;
+  color: var(--color-text);
+  font-size: 2rem;
+  outline: none;
+  width: 100%;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: var(--color-th);
+  color: white;
+  -webkit-box-shadow: 3px 5px 19px -6px var(--shadow);
+  box-shadow: 3px 5px 19px -6px var(--shadow);
+}
+
+.button-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  padding-bottom: 4rem;
+  gap: 1rem;
+}
+
+@media (max-width: 84em) {
+  .button-container {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .button {
+    padding: 1rem 2rem;
+    font-size: 2rem;
+    width: 100%;
+  }
+}
